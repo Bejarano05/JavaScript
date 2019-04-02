@@ -10,15 +10,15 @@
     <script>
         $(document).ready(function(){
             var minutos=prompt("Escriba los minutos: ");
-            var hora=parseInt(minutos/60);
+            var restoHoras=minutos%60;
+            var hora=(minutos-restoHoras)/60;
             var segundos=parseInt(minutos*60);
-            $("#outputhoras").html(hora);
+            $("#outputhoras").html(minutos+ " son "+hora+" hora(s) y "+restoHoras+" minuto(s)");
             $("#outputsegundos").html(segundos);
         });
     </script>
 </head>
 <body>
-    <h2>Los minutos pasados a horas son: </h2>
     <p id="outputhoras"></p>
     <h2>Los minutos pasados a segundos son:</h2>
     <p id="outputsegundos"></p>
