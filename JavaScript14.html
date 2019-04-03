@@ -9,18 +9,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            var numero=parseInt(prompt("Escriba un numero de dos cifras"));
-            var cadena;
+            var numero=prompt("Escriba un numero de dos cifras");
             while  (numero<10 || numero>=99)
             {
                 numero=parseInt(prompt("El numero introducido no es de dos cifras, escriba uno"));
-                cadena=str(numero);
+                
             };
-            
+            var array=[numero];
+            //var string = "0,1";
+            //var array = [string];
+            // alert(array[0]);
+            var reversed=array.reverse();
+
+            $("#resultado").html("El numero introducido es "+numero+" al revés es: "+reversed);
         });
     </script>
 </head>
 <body>
-    
+    <p id="resultado"></p>
 </body>
 </html>
