@@ -13,8 +13,8 @@
             var precio=parseInt(prompt("Precio del producto:"));
             while (precio!=0)
             {
-                var compra=compra+precio;                
-                var precio=parseInt(prompt("Precio del producto:"));
+                compra=compra+precio;                
+                precio=parseInt(prompt("Precio del producto:"));
             }
             var total=compra-(compra*0.15);
             $("#respuesta").html("El precio final de la compra es: "+total);
