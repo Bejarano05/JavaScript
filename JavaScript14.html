@@ -15,13 +15,18 @@
                 numero=parseInt(prompt("El numero introducido no es de dos cifras, escriba uno"));
                 
             };
-            var array=[numero];
+            var resto=numero%10;
+            var restar=(numero-resto)/10;
+
+
+            //Intento fallido
+            //var array=[numero];
             //var string = "0,1";
             //var array = [string];
             // alert(array[0]);
-            var reversed=array.reverse();
+            //var reversed=numero.reverse();
 
-            $("#resultado").html("El numero introducido es "+numero+" al revés es: "+reversed);
+            $("#resultado").html("El numero introducido es "+numero+" al revés es: "+resto+restar);
         });
     </script>
 </head>
