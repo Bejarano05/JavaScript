@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var minutos=prompt("Escriba los minutos: ");
+            var restoHoras=minutos%60;
+            var hora=(minutos-restoHoras)/60;
+            var segundos=parseInt(minutos*60);
+            $("#outputhoras").html(minutos+ " son "+hora+" hora(s) y "+restoHoras+" minuto(s)");
+            $("#outputsegundos").html(segundos);
+        });
+    </script>
+</head>
+<body>
+    <p id="outputhoras"></p>
+    <h2>Los minutos pasados a segundos son:</h2>
+    <p id="outputsegundos"></p>
+</body>
+</html>
