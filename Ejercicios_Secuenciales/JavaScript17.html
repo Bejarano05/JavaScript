@@ -12,7 +12,7 @@
             var horas=parseInt(prompt("¿A qué hora sale el ciclista (horas)?"));
             var minutos=parseInt(prompt("¿A qué hora sale el ciclista (minutos)?"));
             var segundos=parseInt(prompt("¿A qué hora sale el ciclista (segundos)?"));
-            /* var totalsegundos=horas*3600+minutos*60+segundos; */
+            
             var tarda=prompt("¿Cuántos segundos tarda en llegar?");
             var horas2=parseInt(tarda/3600);
             var restohoras=tarda%3600;
@@ -23,11 +23,6 @@
             var totalm=minutos+minutos2;
             var totals=segundos+segundos2;
             
-            
-            /* var tiempototal=totalsegundos+tarda;
-            var segundos2=tiempototal%60;
-            var minutos2=(tiempototal-segundos2)%3600;
-            var horas2=Math.round(tiempototal/3600); */
             $("#resultado").html("La hora de llegada es "+totalh+" horas "+totalm+" minutos "+totals+" segundos.");
         });
     </script>
