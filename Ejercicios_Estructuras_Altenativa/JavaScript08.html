@@ -10,12 +10,30 @@
     <script>
         $(document).ready(function(){
         
+        var nota=parseInt(prompt("Escriba la nota"));
+        var edad=parseInt(prompt("¿Cual es su edad?"));
+        var genero=prompt("¿Eres hombre (M) o mujer (F)?");
         
-        
-        });
+        if (nota>=5 && edad>=18)
+        {
+            if (genero==="f")
+            {
+                $("#resultado").html("Aceptada");
+            }
+            else if (genero==="m")
+            {
+                $("#resultado").html("Posible");
+            }
+        }
+        else
+        {
+            $("#resultado").html("No aceptada");
+        }
+
+    });
 </script>
 </head>
 <body>
-    
+    <p id="resultado"></p>
 </body>
 </html>
