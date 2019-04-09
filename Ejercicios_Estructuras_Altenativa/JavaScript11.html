@@ -10,12 +10,51 @@
     <script>
         $(document).ready(function(){
         
-        
-        
+        var ladoa=prompt("Introduce el primer lado del triangulo");
+        var ladob=prompt("Introduce otro lado del triangulo");
+        var ladoc=prompt("Introduce el ultimo lado del triangulo");
+        var cuadrada1=Math.round(Math.sqrt(Math.pow(ladoc,2)+Math.pow(ladob,2)));
+        if (ladoa==cuadrada1)
+        {
+            $("#resultado2").html("El triangulo es rectangulo");
+        }
+        var cuadrada2=Math.round(Math.sqrt(Math.pow(ladoa,2)+Math.pow(ladoc,2)));
+        if (ladob==cuadrada2)
+        {
+            $("#resultado2").html("El triangulo es rectangulo");
+        }
+        var cuadrada3=Math.round(Math.sqrt(Math.pow(ladob,2)+Math.pow(ladoa,2)));
+        if (ladoc==cuadrada3)
+        {
+            $("#resultado2").html("El triangulo es rectangulo");
+        }
+        if (ladoa==ladob)
+        {
+            $("#resultado").html("El triangulo es isosceles");
+        }
+        if (ladob==ladoc)
+        {
+            $("#resultado").html("El triangulo es isosceles");
+        }
+        if (ladoc==ladoa)
+        {
+            $("#resultado").html("El triangulo es isosceles");
+        }
+        if (ladoa==ladob && ladob==ladoc)
+        {
+            $("#resultado").html("El triangulo es equilatero");            
+        }
+        if (ladoa!=ladob && ladoa!=ladoc && ladob!=ladoc) 
+        {
+            $("#resultado").html("El triangulo es escaleno");  
+        }
+
+
         });
 </script>
 </head>
 <body>
-    
+    <p id="resultado"></p>
+    <p id="resultado2"></p>
 </body>
 </html>
