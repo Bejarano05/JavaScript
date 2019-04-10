@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -33,9 +33,9 @@
 
         switch (d)
         {
-            case "domigo":
-                asumar=importellamada*0.03;
-                total=importellamada+asumar;
+            case "domingo":
+                asumar=parseFloat(importellamada*0.03);
+                total=parseFloat(importellamada+asumar);
                 $("#resultado").html("El importe de la llamada es: "+total+"€");
                 break;
             default:
@@ -43,16 +43,16 @@
                 switch (turno)
                 {
                     case "m":
-                        asumar=importellamada*0.15;
-                        total=importellamada+asumar;
+                        asumar=parseFloat(importellamada*0.15);
+                        total=parseFloat(importellamada+asumar);
                         $("#resultado").html("El importe de la llamada es: "+total+"€");
                     case "t":
-                        asumar=importellamada*0.10;
-                        total=importellamada+asumar;
+                        asumar=parseFloat(importellamada*0.10);
+                        total=parseFloat(importellamada+asumar);
                         $("#resultado").html("El importe de la llamada es: "+total+"€");
                     default:
                     {
-                        $("#resultado").html("El turno del dia introducido es incorrecto");
+                        $("#resultado").html("El día o turno del dia introducido incorrecto");
                     }
                 }
                     
