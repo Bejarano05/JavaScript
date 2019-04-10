@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -13,15 +13,88 @@
         var mes=prompt("Escriba el mes");
         var año=prompt("Escriba el año");
         
-        if ((dia>=1 && dia<=31) && (mes>=1 && mes<=12))
+        switch (mes)
         {
-            $("#resultado").html("Fecha introducida correcta");
+            case "1":
+                if(dia>=1 && dia<=31)
+                {
+                    $("#resultado").html("Fecha correcta");
+                    break;
+                }
+            case "2":
+                if(dia>=1 && dia<=28)
+                {
+                    $("#resultado").html("Fecha correcta");
+                    break;
+                }
+            case "3":
+                if(dia>=1 && dia<=31)
+                {
+                    $("#resultado").html("Fecha correcta");
+                    break;
+                }
+            case "4":
+                if(dia>=1 && dia<=30)
+                {
+                    $("#resultado").html("Fecha correcta");
+                    break;
+                }
+            case "5":
+                if(dia>=1 && dia<=31)
+                {
+                    $("#resultado").html("Fecha correcta");
+                    break;
+                }
+            case "6":
+                if(dia>=1 && dia<=30)
+                {
+                    $("#resultado").html("Fecha correcta");
+                    break;
+                }
+            case "7":
+                if(dia>=1 && dia<=31)
+                {
+                    $("#resultado").html("Fecha correcta");
+                    break;
+                }
+            case "8":
+                if(dia>=1 && dia<=31)
+                {
+                    $("#resultado").html("Fecha correcta");
+                    break;
+                }
+            case "9":
+                if(dia>=1 && dia<=30)
+                {
+                    $("#resultado").html("Fecha correcta");
+                    break;
+                }
+            case "10":
+                if(dia>=1 && dia<=31)
+                {
+                    $("#resultado").html("Fecha correcta");
+                    break;
+                }                
+            case "11":
+                if(dia>=1 && dia<=30)
+                {
+                    $("#resultado").html("Fecha correcta");
+                    break;
+                }
+                
+            case "12":
+                if(dia>=1 && dia<=31)
+                {
+                    $("#resultado").html("Fecha correcta");
+                    break;
+                }
+                
+            default:
+            {
+                $("#resultado").html("Fecha incorrecta");
+                break;
+            }
         }
-        else 
-        {
-            $("#resultado").html("Fecha incorrecta");
-        }
-        
         
         });
 </script>
