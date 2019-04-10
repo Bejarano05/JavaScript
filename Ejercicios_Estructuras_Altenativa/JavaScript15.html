@@ -10,12 +10,31 @@
     <script>
         $(document).ready(function(){
         
-        
+        var n=parseInt(prompt("¿Cuántos niños van al viaje?"));
+        var total;
+
+        if (n>=100)
+        {
+            $("#resultado").html("El precio por alumno es 65€");
+        }
+        if (n>=50 && n<100)
+        {
+            $("#resultado").html("El precio por alumno es 70€");
+        }
+        if (n>=30 && n<50)
+        {
+            $("#resultado").html("El precio por alumno es 95€");
+        }
+        if (n<30)
+        {
+            total=4000/n;
+            $("#resultado").html("El precio por alumno es "+total+"€");
+        }
         
         });
 </script>
 </head>
 <body>
-    
+    <p id="resultado"></p>
 </body>
 </html>
