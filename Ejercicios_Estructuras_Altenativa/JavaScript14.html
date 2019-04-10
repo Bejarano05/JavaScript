@@ -10,12 +10,48 @@
     <script>
         $(document).ready(function(){
         
-        
+        var kilouva=parseFloat(prompt("¿Cuánto cuesta el kilo de uva?"));
+        var tipo=prompt("¿Qué tipo de uva es? (a) o (b)");
+        var tamaño=parseInt(prompt("¿Qué tamaño es? (1) o (2)"));
+        var total;
+        switch (tipo)
+        {
+            case "a":
+                if (tamaño==1)
+                {
+                    total=kilouva+0.2;
+                    $("#resultado").html("El precio final de la uva es "+total+ " €");
+                    break;
+                }
+                if (tamaño==2)
+                {
+                    total=kilouva+0.3;
+                    $("#resultado").html("El precio final de la uva es "+total+" €");
+                    break;
+                }
+            case "b":
+                if (tamaño==1)
+                {
+                    total=kilouva-0.3;
+                    $("#resultado").html("El precio final de la uva es "+total+ " €");
+                    break;
+                }
+                if (tamaño==2)
+                {
+                    total=kilouva-0.5;
+                    $("#resultado").html("El precio final de la uva es "+total+" €");
+                    break;
+                }
+            default: 
+            {
+                $("#resultado").html("El tipo o el tamaño de la uva es incorrecto");
+            }
+        }
         
         });
 </script>
 </head>
 <body>
-    
+    <p id="resultado"></p>
 </body>
 </html>
