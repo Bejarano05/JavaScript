@@ -10,12 +10,56 @@
     <script>
         $(document).ready(function(){
         
-        
+            var m=prompt("Escribe un mes del año (en numeros)");
+
+            switch (m)
+            {
+                case "1":
+                    $("#resultado").html("Enero");
+                    break;
+                case "2":
+                    $("#resultado").html("Fecbrero");
+                    break;
+                case "3":
+                    $("#resultado").html("Marzo");
+                    break;
+                case "4":
+                    $("#resultado").html("Abril");
+                    break;
+                case "5":
+                    $("#resultado").html("Mayo");
+                    break;
+                case "6":
+                    $("#resultado").html("Junio");
+                    break;
+                case "7":
+                    $("#resultado").html("Julio");
+                    break;
+                case "8":
+                    $("#resultado").html("Agosto");
+                    break;
+                case "9":
+                    $("#resultado").html("Septiembre");
+                    break;
+                case "10":
+                    $("#resultado").html("Octubre");
+                    break;
+                case "11":
+                    $("#resultado").html("Noviembre");
+                    break;
+                case "12":
+                    $("#resultado").html("Diciembre");
+                    break;
+                default:
+                {
+                    $("#resultado").html("Mes introducido incorrecto");
+                }
+            }
         
         });
 </script>
 </head>
 <body>
-    
+    <p id="resultado"></p>
 </body>
 </html>
