@@ -16,9 +16,28 @@
         var y2=prompt("Escriba la coordenada y2");
         var r1=prompt("Escriba el radio de la circuferencia 1");
         var r2=prompt("Escriba el radio de la circuferencia 2");
+        
+        var coordenada1=Math.abs(Math.pow(x1,2)-Math.pow(x2,2));
+        var coordenada2=Math.abs(Math.pow(y1,2)-Math.pow(y2,2));
+        var distancia=Math.sqrt(coordenada1+coordenada2);
+        
 
-        
-        
+        if (x1==x2 && y1==y2)
+        {
+            $("#resultado").html("La circuferencia son concentricas");
+        }
+        else if ((r1+r2)<distancia)
+        {
+            $("#resultado").html("La circuferencia son exteriores");
+        }
+        else if ((r1+r2)==distancia)
+        {
+            $("#resultado").html("La circuferencia son tangentes exteriores");
+        }
+        else if ((r1+r2)>distancia)
+        {
+            $("#resultado").html("La circuferencia son exteriores");
+        }
         
         
         
@@ -26,6 +45,6 @@
 </script>
 </head>
 <body>
-    
+    <p id="resultado"></p>
 </body>
 </html>
