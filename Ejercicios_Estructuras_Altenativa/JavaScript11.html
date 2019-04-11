@@ -10,46 +10,45 @@
     <script>
         $(document).ready(function(){
         
-        var ladoa=prompt("Introduce el primer lado del triangulo");
-        var ladob=prompt("Introduce otro lado del triangulo");
-        var ladoc=prompt("Introduce el ultimo lado del triangulo");
-        var cuadrada1=Math.round(Math.sqrt(Math.pow(ladoc,2)+Math.pow(ladob,2)));
-        if (ladoa==cuadrada1)
-        {
-            $("#resultado2").html("El triangulo es rectangulo");
-        }
-        var cuadrada2=Math.round(Math.sqrt(Math.pow(ladoa,2)+Math.pow(ladoc,2)));
-        if (ladob==cuadrada2)
-        {
-            $("#resultado2").html("El triangulo es rectangulo");
-        }
-        var cuadrada3=Math.round(Math.sqrt(Math.pow(ladob,2)+Math.pow(ladoa,2)));
-        if (ladoc==cuadrada3)
-        {
-            $("#resultado2").html("El triangulo es rectangulo");
-        }
-        if (ladoa==ladob)
-        {
-            $("#resultado").html("El triangulo es isosceles");
-        }
-        if (ladob==ladoc)
-        {
-            $("#resultado").html("El triangulo es isosceles");
-        }
-        if (ladoc==ladoa)
-        {
-            $("#resultado").html("El triangulo es isosceles");
-        }
-        if (ladoa==ladob && ladob==ladoc)
-        {
-            $("#resultado").html("El triangulo es equilatero");            
-        }
-        if (ladoa!=ladob && ladoa!=ladoc && ladob!=ladoc) 
-        {
-            $("#resultado").html("El triangulo es escaleno");  
-        }
+            var ladoa=prompt("Introduce el primer lado del triangulo");
+            var ladob=prompt("Introduce otro lado del triangulo");
+            var ladoc=prompt("Introduce el ultimo lado del triangulo");
+            var acuadrado=Math.pow(ladoa,2);
+            var bcuadrado=Math.pow(ladob,2);
+            var ccuadrado=Math.pow(ladoc,2);
 
-
+            if (ladoa==ladob && ladoa==ladob)
+            {
+                $("#resultado").html("Triangulo equilátero");
+            }
+            if (ladoa!=ladob && ladoa!=ladoc && ladob!=ladoc)
+            {
+                $("#resultado").html("Triangulo escaleno");
+            }
+            if (ladoa==ladob && ladoa!=ladoc)
+            {
+                $("#resultado").html("Triangulo isosceles");
+            }
+            if (ladoa==ladoc && ladoa!=ladob)
+            {
+                $("#resultado").html("Triangulo isosceles");
+            }
+            if (ladoc==ladob && ladoa!=ladoc)
+            {
+                $("#resultado").html("Triangulo isosceles");
+            }
+            if (acuadrado==(bcuadrado+ccuadrado))
+            {
+                $("#resultado").html("Triangulo rectangulo");
+            }
+            if (bcuadrado==(acuadrado+ccuadrado))
+            {
+                $("#resultado").html("Triangulo rectangulo");
+            }
+            if (ccuadrado==(bcuadrado+acuadrado))
+            {
+                $("#resultado").html("Triangulo rectangulo");
+            }
         });
 </script>
 </head>
