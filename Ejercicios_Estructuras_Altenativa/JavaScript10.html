@@ -38,6 +38,14 @@
         {
             $("#resultado").html("La circuferencia son exteriores");
         }
+        else if ((Math.abs(r1-r2))==distancia)
+        {
+            $("#resultado").html("La circuferencia son tangentes interiores");
+        }
+        else if ((Math.abs(r1-r2))>diferecia)
+        {
+            $("#resultado").html("La circuferencia son interiores");
+        }
         
         
         
