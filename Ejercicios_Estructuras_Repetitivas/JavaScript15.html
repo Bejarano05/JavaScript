@@ -11,11 +11,14 @@
         $(document).ready(function(){
             
             var total=10;
+            var sum=0;
             for(var cont=1;cont<=20; cont++)
             {
+                sum=sum+total;
                 $("#resultado").prepend("El "+cont+"º mes debe pagar"+total+"€ <br/>");
                 total=total*2;                
             }
+            $("#resultado").prepend("El total a pagar es: "+sum+"€ <br/>");
 
 
         });
