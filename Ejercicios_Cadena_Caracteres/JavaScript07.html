@@ -10,6 +10,17 @@
     <script>
         $(document).ready(function(){
             
+            var cadena=prompt("Escriba una frase");
+            var caracter=prompt("Escribe un caracter");
+            while(caracter.length!=1)
+            {
+                caracter=prompt("Vuelva a escribir UN SOLO caracter");
+            }
+            cadena=cadena.replace(cadena[0], caracter);
+            alert(cadena);
+
+
+
         });
         </script>
 </head>
