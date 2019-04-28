@@ -11,15 +11,25 @@
         $(document).ready(function(){
             
             var cadena=prompt("Escriba una frase");
+            var cadena2=cadena.split("");
+            alert(cadena2);
+            var cadena3=cadena.toUpperCase();
+            
+            alert(cadena3);
 
             for(var cont=0;cont<cadena.length;cont++)
             {
-                var n=cadena.charCodeAt(cont)
-                if(n<64 && n>91)
+                if (cadena3[cont]===cadena2[cont])
                 {
-                    
+                    cadena2[cont]=cadena2[cont].toLowerCase();
+                }
+                else
+                {
+                    cadena2[cont]=cadena2[cont].toUpperCase();
                 }
             }
+            var cadena4=cadena2.join("");
+            alert(cadena4);
 
         });
         </script>
