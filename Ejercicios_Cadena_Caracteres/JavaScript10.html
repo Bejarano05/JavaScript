@@ -9,11 +9,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            
+            var cadena=prompt("Escriba una cadena");
+            var cadena2="";
+
+            for(var cont=0;cont<cadena.length; cont++)
+            {
+                cadena2=cadena[cont]+cadena2;
+                alert(cadena2);
+            }
+
+            if(cadena===cadena2)
+            {
+                $("#resultado").html("La cadena "+cadena+" es un palindromo");
+            }
+            else
+            {
+                $("#resultado").html("La cadena "+cadena+" no es un palindromo");
+            }
         });
         </script>
 </head>
 <body>
-    
+    <p id="resultado"></p>
 </body>
 </html>
